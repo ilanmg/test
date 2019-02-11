@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Sanity" parallel="none" thread-count="0">
+	<test name="Sanity-Test" parallel="methods" thread-count="3" group-by-instances="true" >
+
+<suite name="Sanity" thread-count="1" parallel="tests">
+	<test name="Sanity">
+
+		<packages>
+			<package name="Sanity.*" />
+		</packages>
+	</test>
+	<test name="Artlist">
+		<packages>
+			<package name="Artlist"/>
+		</packages>
+	</test>
+</suite>

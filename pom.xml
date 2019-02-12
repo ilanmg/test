@@ -100,8 +100,8 @@
       </dependency>
     </dependencies>
                 <configuration>
-                    <forkCount>2.5C</forkCount>
-                    <reuseForks>false</reuseForks>
+                    <forkCount>5</forkCount>
+                    <reuseForks>true</reuseForks>
                      <testFailureIgnore>true</testFailureIgnore>
                      
                     <suiteXmlFiles>

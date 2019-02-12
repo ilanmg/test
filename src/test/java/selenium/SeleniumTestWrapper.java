@@ -105,13 +105,13 @@ public abstract class SeleniumTestWrapper<WinHandle> {
 
     @AfterMethod
     public void closeBrowser(ITestResult result) {
-        getDriver().close();
+        getDriver().quit();
         System.out.println("finish method name:" + result.getMethod().getMethodName());
     }
 
     @AfterClass
     public void closeBrowser() {
-        getDriver().close();
+        getDriver().quit();
     }
     @AfterClass
     protected void tearDown() {

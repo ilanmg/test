@@ -98,7 +98,9 @@
                 <configuration>
 
 
-
+                    <forkCount>0</forkCount>
+                    <reuseForks>true</reuseForks>
+                    <testFailureIgnore>true</testFailureIgnore>
 
                     <suiteXmlFiles>
                         <!--<suiteXmlFile>src/test/resources/suites/suites-test-testng.xml</suiteXmlFile>-->

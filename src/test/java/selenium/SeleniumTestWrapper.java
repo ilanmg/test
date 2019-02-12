@@ -113,7 +113,7 @@ public abstract class SeleniumTestWrapper<WinHandle> {
     public void closeBrowser() {
         getDriver().close();
     }
-    @AfterClass(alwaysRun = true)
+    @AfterClass
     protected void tearDown() {
         getDriver().quit();
         driver = null;

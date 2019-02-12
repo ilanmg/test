@@ -4,24 +4,39 @@ import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
 import org.openqa.selenium.WebDriver;
 
+import org.openqa.selenium.remote.DesiredCapabilities;
 import selenium.driver.UserAgents;
 import selenium.driver.WebDriverBuilder;
 import selenium.driver.WebDriverConfig;
+import selenium.driver.WebDriverRemoteBuilder;
+
+import static java.lang.Boolean.parseBoolean;
 
 public class WebDriverProvider extends TestWatcher {
+    private final WebDriverRemoteBuilder WebDriverRemoteBuilder;
     private final WebDriverBuilder webDriverBuilder;
     private WebDriver driver;
 
     public WebDriverProvider(final WebDriverConfig webDriverConfig) {
         this.webDriverBuilder = new WebDriverBuilder(webDriverConfig);
+        this.WebDriverRemoteBuilder = new WebDriverRemoteBuilder(webDriverConfig);
     }
+
+
 
     public WebDriver getDriver() {
         if (driver == null) {
-            driver = webDriverBuilder.toWebDriver();
+            Boolean isRemote  = parseBoolean(System.getProperty("remote"));
+            if(isRemote){
+                driver = WebDriverRemoteBuilder.toWebDriver();
+            }else{
+                driver = webDriverBuilder.toWebDriver();
+            }
+
         }
         return driver;
     }
+
 
     public void useUserAgent(UserAgents userAgent) {
         webDriverBuilder.userAgent(userAgent);

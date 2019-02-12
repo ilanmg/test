@@ -100,7 +100,7 @@
                   </dependency>
                 </dependencies>
                 <configuration>
-                    <forkCount>1</forkCount>
+                    <forkCount>5</forkCount>
                     <reuseForks>false</reuseForks>
                     <testFailureIgnore>true</testFailureIgnore>
                      

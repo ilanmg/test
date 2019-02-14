@@ -1,4 +1,4 @@
-package ArtlistRegression;
+package Sanity;
 
 
 import org.openqa.selenium.support.PageFactory;

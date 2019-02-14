@@ -1,4 +1,4 @@
-package ArtlistRegression;
+package Sanity;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -102,9 +102,5 @@ public abstract class SeleniumTestWrapper<WinHandle> {
     }
 
 
-    @AfterMethod
-    public void closeBrowser() {
-        getDriver().quit();
-    }
 
 }

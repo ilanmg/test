@@ -1,9 +1,4 @@
-package Sanity;
-
-import static selenium.utils.annotations.browser.Browsers.EDGE;
-import static selenium.utils.annotations.browser.Browsers.INTERNET_EXPLORER;
-
-import static selenium.utils.browser.Screen.XLARGE;
+package ArtlistRegression;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -11,12 +6,16 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import selenium.SeleniumTestWrapper;
+import selenium.pageobjects.Common.PlaySongsFromHomepage;
 import selenium.pageobjects.Common.SiteHeader;
 import selenium.pageobjects.StartPage;
-import selenium.pageobjects.Common.PlaySongsFromHomepage;
 import selenium.utils.annotations.browser.Browser;
 import selenium.utils.annotations.browser.BrowserDimension;
 import selenium.utils.annotations.browser.Browsers;
+
+import static selenium.utils.annotations.browser.Browsers.EDGE;
+import static selenium.utils.annotations.browser.Browsers.INTERNET_EXPLORER;
+import static selenium.utils.browser.Screen.XLARGE;
 
 @BrowserDimension(XLARGE)
 @Browser(skip = { INTERNET_EXPLORER, EDGE, Browsers.FIREFOX })

@@ -74,7 +74,11 @@
             <artifactId>logback-classic</artifactId>
             <version>1.1.7</version>
         </dependency>
-
+            <dependency>
+                <groupId>org.apache.maven.surefire</groupId>
+                <artifactId>surefire-testng</artifactId>
+                <version>2.18.1</version>
+            </dependency>
         </dependencies>
     <build>
         <testResources>
@@ -93,11 +97,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M3</version>
               <dependencies>
-                  <dependency>
-                      <groupId>org.apache.maven.surefire</groupId>
-                      <artifactId>surefire-testng</artifactId>
-                      <version>2.18.1</version>
-                  </dependency>
+
     </dependencies>
                 <configuration>
 

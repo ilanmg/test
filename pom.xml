@@ -87,6 +87,8 @@
                     <reuseForks>true</reuseForks>
                     <testFailureIgnore>true</testFailureIgnore>
                     <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+                    <parallel>methods</parallel>
+                    <threadCount>10</threadCount>
                     <suiteXmlFiles>
                         <!--<suiteXmlFile>src/test/resources/suites/suites-test-testng.xml</suiteXmlFile>-->
                         <suiteXmlFile>src/test/resources/suites/${suiteXmlFile}</suiteXmlFile>

@@ -26,4 +26,5 @@ public class WebDriverConfig {
 		}
 		return typedProperties.getValue("selenium.hub.url");
 	}
+
 }

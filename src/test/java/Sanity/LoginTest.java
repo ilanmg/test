@@ -44,7 +44,7 @@ public class LoginTest extends SeleniumTestWrapper {
         loginPage.setEmail("ilanmg@artlist.io");
         loginPage.setPassword("Tomido1212*");
         loginPage.clickLoginBtn();
-        Thread.sleep(5000);
+       
         //Assert.assertEquals(true, siteHeader.getLicenseBtn());
        
     }

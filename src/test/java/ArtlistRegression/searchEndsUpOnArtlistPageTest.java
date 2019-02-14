@@ -1,25 +1,19 @@
-package Sanity;
+package ArtlistRegression;
 
-import org.testng.Assert;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import selenium.SeleniumTestWrapper;
 import selenium.pageobjects.Common.LoginPage;
 import selenium.pageobjects.Common.Modals;
 import selenium.pageobjects.Common.SearchHeader;
 import selenium.pageobjects.StartPage;
-
 import selenium.utils.annotations.browser.Browser;
 import selenium.utils.annotations.browser.BrowserDimension;
 import selenium.utils.annotations.browser.Browsers;
 
 import static selenium.utils.annotations.browser.Browsers.*;
 import static selenium.utils.browser.Screen.XLARGE;
-
-import java.util.concurrent.TimeUnit;
 
 @BrowserDimension(XLARGE)
 @Browser(skip = { INTERNET_EXPLORER, EDGE, PHANTOMJS, Browsers.FIREFOX })

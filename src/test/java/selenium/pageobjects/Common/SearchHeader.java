@@ -26,7 +26,7 @@ public class SearchHeader extends Pages {
     @FindBy(css="#tagslist > li > a.remove-tag-link")
     private WebElement removeResultInput;
 
-    @FindBy(xpath="//div[@class='trigger']")
+    @FindBy(css="#top-bar > div.row.top-row > div > div > div > div.newlogo > div > div")
     private WebElement triggerInput;
 
     @FindBy(css="div.trigger")

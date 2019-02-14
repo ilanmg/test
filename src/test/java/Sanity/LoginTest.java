@@ -30,14 +30,12 @@ public class LoginTest extends SeleniumTestWrapper {
     StartPage startPage = PageFactory.initElements(driver, StartPage.class);
     LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
     SiteHeader siteHeader = PageFactory.initElements(driver, SiteHeader.class);
-    
-    
-    
+
+
     @BeforeTest
-    public void setup() {
+    public void setup() throws InterruptedException {
         startPage.open();
     }
-
     @Test(groups ={"Sanity"}, description= "the script should perform a login by giving the Email, Pass, and click the login button")
     public void log__in() throws InterruptedException {
     	

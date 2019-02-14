@@ -76,7 +76,12 @@
 
     </dependencies>
                 <configuration>
-
+                    <properties>
+                        <property>
+                            <name>objectfactory</name>
+                            <value>testng.objectfactory.TestNGCustomObjectFactory</value>
+                        </property>
+                    </properties>
 
                     <forkCount>0</forkCount>
                     <reuseForks>true</reuseForks>

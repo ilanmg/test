@@ -1,25 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>christian-draeger</groupId>
     <artifactId>basic-selenium-project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <properties>
-	        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	        <browser.name>chrome</browser.name>
-	        <failsafe.rerunFailingTestsCount>2</failsafe.rerunFailingTestsCount>
-
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <browser.name>chrome</browser.name>
+        <failsafe.rerunFailingTestsCount>2</failsafe.rerunFailingTestsCount>
     </properties>
-		<dependencies>
-		    <dependency>
-			    <groupId>org.testng</groupId>
-			    <artifactId>testng</artifactId>
-			    <version>6.14.3</version>
-			    <scope>test</scope>
-            </dependency>
-
-            <dependency>
+    <dependencies>
+        <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>3.0.0</version>
@@ -50,12 +42,7 @@
             <artifactId>logback-classic</artifactId>
             <version>1.1.7</version>
         </dependency>
-            <dependency>
-                <groupId>org.apache.maven.surefire</groupId>
-                <artifactId>surefire-testng</artifactId>
-                <version>3.0.0-M3</version>
-            </dependency>
-        </dependencies>
+    </dependencies>
     <build>
         <testResources>
             <testResource>
@@ -68,43 +55,14 @@
             </testResource>
         </testResources>
         <plugins>
-        	<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
+            <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M1</version>
-              <dependencies>
-
-    </dependencies>
                 <configuration>
-
-
-                    <forkCount>1</forkCount>
-                    <reuseForks>true</reuseForks>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
-                    <parallel>methods</parallel>
-                    <threadCount>10</threadCount>
-                    <useSystemClassLoader>false</useSystemClassLoader>
-                    <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-                    <suiteXmlFiles>
-                        <!--<suiteXmlFile>src/test/resources/suites/suites-test-testng.xml</suiteXmlFile>-->
-                        <suiteXmlFile>src/test/resources/suites/${suiteXmlFile}</suiteXmlFile>
-                    </suiteXmlFiles>
-
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
                 </configuration>
-
             </plugin>
-            <!--<plugin>-->
-                <!--<artifactId>maven-surefire-plugin</artifactId>-->
-                <!--<configuration>-->
-                    <!--<systemPropertyVariables>-->
-                        <!--<remote>false</remote>-->
-                    <!--</systemPropertyVariables>-->
-                    <!--<includes>-->
-                        <!--<include>**/*Test.java</include>-->
-                    <!--</includes>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>2.19.1</version>

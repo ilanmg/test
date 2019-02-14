@@ -47,7 +47,7 @@ public class PaymentTest extends SeleniumTestWrapper {
         
         driver.manage().window().maximize();
         
-        Thread.sleep(5000);
+        Thread.sleep(8000);
         pricingModal.clickVisaRadioBtn();
         
         pricingModal.switchToVisaIframe();

@@ -39,7 +39,7 @@ public class LoginTest extends SeleniumTestWrapper {
     }
 
     @Test(groups ={"Sanity"}, description= "the script should perform a login by giving the Email, Pass, and click the login button")
-    public void log_in() throws InterruptedException {
+    public void log__in() throws InterruptedException {
     	
         loginPage.clickSignInBtn();
         loginPage.setEmail("ilanmg@artlist.io");

@@ -34,7 +34,7 @@ public class LoginTest extends SeleniumTestWrapper {
 
     @BeforeTest
     public void setup() throws InterruptedException {
-        Thread.sleep(5000);
+
         startPage.open();
     }
     @Test(groups ={"Sanity"}, description= "the script should perform a login by giving the Email, Pass, and click the login button")
@@ -44,7 +44,7 @@ public class LoginTest extends SeleniumTestWrapper {
         loginPage.setEmail("ilanmg@artlist.io");
         loginPage.setPassword("Tomido1212*");
         loginPage.clickLoginBtn();
-       
+
         //Assert.assertEquals(true, siteHeader.getLicenseBtn());
        
     }

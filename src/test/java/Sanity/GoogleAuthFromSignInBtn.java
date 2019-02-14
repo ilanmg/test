@@ -19,6 +19,9 @@ import selenium.utils.annotations.browser.Browser;
 import selenium.utils.annotations.browser.BrowserDimension;
 import selenium.utils.annotations.browser.Browsers;
 
+
+
+
 @SuppressWarnings("rawtypes")
 @BrowserDimension(XLARGE)
 @Browser(skip = {INTERNET_EXPLORER, EDGE, PHANTOMJS, Browsers.FIREFOX})

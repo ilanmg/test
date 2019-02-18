@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Ilan Amgar\AppData\Local\Temp\testng-eclipse--1111734754\testng-customsuite.xml</span>
+                    <span>C:\Users\Ilan Amgar\AppData\Local\Temp\testng-eclipse--629465187\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>1 group</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Sanity.searchEndsUpOnArtlistPageTest" hash-for-method="search">search</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Sanity.playPauseSong" hash-for-method="playPauseSong">playPauseSong</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,16 +120,16 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Sanity.searchEndsUpOnArtlistPageTest</span>
+              <span class="class-name">Sanity.playPauseSong</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="search">
-                  </a> <!-- search -->
-                  <span class="method-name">search</span>
+                  <a name="playPauseSong">
+                  </a> <!-- playPauseSong -->
+                  <span class="method-name">playPauseSong</span>
                   <em>
-(the script is searching for certain artist and then taks the user into the artists page)                  </em>
+(this test should play songs and pausing them)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Ilan Amgar\AppData\Local\Temp\testng-eclipse--1111734754\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Ilan Amgar\AppData\Local\Temp\testng-eclipse--629465187\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,7 +146,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Sanity.searchEndsUpOnArtlistPageTest&quot;/&gt;
+      &lt;class name=&quot;Sanity.playPauseSong&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -170,14 +170,6 @@
             <span class="header-content">Groups for Default suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">Artlist</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">search</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Default_suite" class="panel">
@@ -196,14 +188,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'search')
-data.setCell(0, 2, 'Sanity.searchEndsUpOnArtlistPageTest')
-data.setCell(0, 3, 6022);
+data.setCell(0, 1, 'playPauseSong')
+data.setCell(0, 2, 'Sanity.playPauseSong')
+data.setCell(0, 3, 27517);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 27 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -229,38 +221,38 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Sanity.searchEndsUpOnArtlistPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Sanity.playPauseSong</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">browser</span>
-                <span class="method-start">33807 ms</span>
+                <span class="method-start">3938 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">browserDimension</span>
-                <span class="method-start">33808 ms</span>
+                <span class="method-start">3938 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">disableCookies</span>
-                <span class="method-start">34032 ms</span>
+                <span class="method-start">4159 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">printTestInfo(public void Sanity.playPauseSong.playPauseSong() throws java.lang.InterruptedException)</span>
+                <span class="method-start">4160 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">setUserAgent</span>
-                <span class="method-start">34034 ms</span>
+                <span class="method-start">4161 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">search</span>
-                <span class="method-start">34036 ms</span>
+                <span class="method-name">playPauseSong</span>
+                <span class="method-start">4161 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">cleanup</span>
-                <span class="method-start">40060 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">40840 ms</span>
+                <span class="method-name">closeBrowser([TestResult name=playPauseSong status=SUCCESS method=playPauseSong.playPauseSong()[pri:0, instance:S...)</span>
+                <span class="method-start">31679 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

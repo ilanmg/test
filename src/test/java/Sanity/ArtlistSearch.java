@@ -35,7 +35,7 @@ public class ArtlistSearch extends SeleniumTestWrapper {
 
     @Test(groups ={"sanity"},  description= "the script is searching for a letter, then picks up the first result")
     public void search() throws InterruptedException {
-    	
+
         searchHeader.clickTriggerIcon();
         searchHeader.clickSearchIcon().sendKeys("b");
         searchHeader.clickFirstResult();

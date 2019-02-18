@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>christian-draeger</groupId>
     <artifactId>basic-selenium-project</artifactId>
@@ -10,8 +10,15 @@
         <browser.name>chrome</browser.name>
         <failsafe.rerunFailingTestsCount>2</failsafe.rerunFailingTestsCount>
     </properties>
-    <dependencies>
-        <dependency>
+		<dependencies>
+		    <dependency>
+			    <groupId>org.testng</groupId>
+			    <artifactId>testng</artifactId>
+			    <version>6.14.3</version>
+			    <scope>test</scope>
+            </dependency>
+
+            <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>3.0.0</version>
@@ -21,12 +28,12 @@
             <artifactId>webdrivermanager</artifactId>
             <version>1.4.10</version>
         </dependency>
-        <dependency>
+        <!--  <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>java-hamcrest</artifactId>
@@ -42,13 +49,8 @@
             <artifactId>logback-classic</artifactId>
             <version>1.1.7</version>
         </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.14.3</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+           
+        </dependencies>
     <build>
         <testResources>
             <testResource>
@@ -61,24 +63,45 @@
             </testResource>
         </testResources>
         <plugins>
-            <plugin>
+        	<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M1</version>
+                <version>2.14.1</version>
                 <configuration>
-                    <includes>
-                        <include>**/*Test.java</include>
-                    </includes>
-                    <forkCount>1</forkCount>
-                    <reuseForks>true</reuseForks>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
-                    <parallel>methods</parallel>
-                    <threadCount>10</threadCount>
-                    <useSystemClassLoader>false</useSystemClassLoader>
-                    <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
+                    <suiteXmlFiles>
+                        <!--<suiteXmlFile>src/test/resources/suites/suites-test-testng.xml</suiteXmlFile>-->
+                        <suiteXmlFile>src/test/resources/suites/${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
+                    
+                    <!--<properties>
+				       <property>
+				            <name>parallel</name>
+				            <value>methods</value>
+				        </property>
+				        <property>
+				            <name>threadcount</name>
+				            <value>5</value>
+				        </property>
+				        <property>
+				            <name>dataproviderthreadcount</name>
+				            <value>3</value>
+				        </property>
+                   </properties>-->
                 </configuration>
+
             </plugin>
+            <!--<plugin>-->
+                <!--<artifactId>maven-surefire-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<systemPropertyVariables>-->
+                        <!--<remote>false</remote>-->
+                    <!--</systemPropertyVariables>-->
+                    <!--<includes>-->
+                        <!--<include>**/*Test.java</include>-->
+                    <!--</includes>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>2.19.1</version>
@@ -92,13 +115,46 @@
                 </executions>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
+                <version>3.7.0</version>
                 <configuration>
                     <forceJavacCompilerUse>true</forceJavacCompilerUse>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <testSource>1.8</testSource>
+                    <testTarget>1.8</testTarget>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>
+                                ${project.build.directory}/libs
+                            </outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

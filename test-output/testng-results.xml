@@ -2,58 +2,61 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32460" started-at="2019-02-18T13:27:24Z" finished-at="2019-02-18T13:27:57Z">
+  <suite name="Default suite" duration-ms="6560" started-at="2019-03-03T09:18:01Z" finished-at="2019-03-03T09:18:07Z">
     <groups>
+      <group name="Sanity">
+        <method signature="LoginTest.log__in()[pri:0, instance:Sanity.LoginTest@704deff2]" name="log__in" class="Sanity.LoginTest"/>
+      </group> <!-- Sanity -->
     </groups>
-    <test name="Default test" duration-ms="32460" started-at="2019-02-18T13:27:24Z" finished-at="2019-02-18T13:27:57Z">
-      <class name="Sanity.playPauseSong">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Sanity.playPauseSong@704deff2]" name="setup" is-config="true" duration-ms="3929" started-at="2019-02-18T13:27:24Z" finished-at="2019-02-18T13:27:28Z">
+    <test name="Default test" duration-ms="6560" started-at="2019-03-03T09:18:01Z" finished-at="2019-03-03T09:18:07Z">
+      <class name="Sanity.LoginTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Sanity.LoginTest@704deff2]" name="setup" is-config="true" duration-ms="4383" started-at="2019-03-03T09:18:01Z" finished-at="2019-03-03T09:18:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="browser()[pri:0, instance:Sanity.playPauseSong@704deff2]" name="browser" is-config="true" duration-ms="0" started-at="2019-02-18T13:27:28Z" finished-at="2019-02-18T13:27:28Z">
+        <test-method status="PASS" signature="browser()[pri:0, instance:Sanity.LoginTest@704deff2]" name="browser" is-config="true" duration-ms="0" started-at="2019-03-03T09:18:05Z" finished-at="2019-03-03T09:18:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browser -->
-        <test-method status="PASS" signature="browserDimension()[pri:0, instance:Sanity.playPauseSong@704deff2]" name="browserDimension" is-config="true" duration-ms="221" started-at="2019-02-18T13:27:28Z" finished-at="2019-02-18T13:27:29Z">
+        <test-method status="PASS" signature="browserDimension()[pri:0, instance:Sanity.LoginTest@704deff2]" name="browserDimension" is-config="true" duration-ms="222" started-at="2019-03-03T09:18:05Z" finished-at="2019-03-03T09:18:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserDimension -->
-        <test-method status="PASS" signature="disableCookies()[pri:0, instance:Sanity.playPauseSong@704deff2]" name="disableCookies" is-config="true" duration-ms="1" started-at="2019-02-18T13:27:29Z" finished-at="2019-02-18T13:27:29Z">
+        <test-method status="PASS" signature="disableCookies()[pri:0, instance:Sanity.LoginTest@704deff2]" name="disableCookies" is-config="true" duration-ms="1" started-at="2019-03-03T09:18:05Z" finished-at="2019-03-03T09:18:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- disableCookies -->
-        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:Sanity.playPauseSong@704deff2]" name="printTestInfo" is-config="true" duration-ms="1" started-at="2019-02-18T13:27:29Z" finished-at="2019-02-18T13:27:29Z">
+        <test-method status="PASS" signature="printTestInfo(java.lang.reflect.Method)[pri:0, instance:Sanity.LoginTest@704deff2]" name="printTestInfo" is-config="true" duration-ms="1" started-at="2019-03-03T09:18:05Z" finished-at="2019-03-03T09:18:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void Sanity.playPauseSong.playPauseSong() throws java.lang.InterruptedException]]>
+                <![CDATA[public void Sanity.LoginTest.log__in() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printTestInfo -->
-        <test-method status="PASS" signature="playPauseSong()[pri:0, instance:Sanity.playPauseSong@704deff2]" name="playPauseSong" duration-ms="27517" started-at="2019-02-18T13:27:29Z" description="this test should play songs and pausing them" finished-at="2019-02-18T13:27:56Z">
+        <test-method status="PASS" signature="log__in()[pri:0, instance:Sanity.LoginTest@704deff2]" name="log__in" duration-ms="1151" started-at="2019-03-03T09:18:05Z" description="the script should perform a login by giving the Email, Pass, and click the login button" finished-at="2019-03-03T09:18:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- playPauseSong -->
-        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:Sanity.playPauseSong@704deff2]" name="setUserAgent" is-config="true" duration-ms="0" started-at="2019-02-18T13:27:29Z" finished-at="2019-02-18T13:27:29Z">
+        </test-method> <!-- log__in -->
+        <test-method status="PASS" signature="setUserAgent()[pri:0, instance:Sanity.LoginTest@704deff2]" name="setUserAgent" is-config="true" duration-ms="0" started-at="2019-03-03T09:18:05Z" finished-at="2019-03-03T09:18:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUserAgent -->
-        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:Sanity.playPauseSong@704deff2]" name="closeBrowser" is-config="true" duration-ms="778" started-at="2019-02-18T13:27:56Z" finished-at="2019-02-18T13:27:57Z">
+        <test-method status="PASS" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:Sanity.LoginTest@704deff2]" name="closeBrowser" is-config="true" duration-ms="785" started-at="2019-03-03T09:18:07Z" finished-at="2019-03-03T09:18:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=playPauseSong status=SUCCESS method=playPauseSong.playPauseSong()[pri:0, instance:Sanity.playPauseSong@704deff2] output={null}]]]>
+                <![CDATA[[TestResult name=log__in status=SUCCESS method=LoginTest.log__in()[pri:0, instance:Sanity.LoginTest@704deff2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- Sanity.playPauseSong -->
+      </class> <!-- Sanity.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
